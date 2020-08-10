@@ -1,0 +1,47 @@
+.custom-input {
+
+  &.error input[type=text],
+  &.error input[type=number],
+  &.error input[type=phone],
+  &.error input[type=email] {
+    border-color: red;
+  }
+
+  label {
+    display: block;
+    font-size: 13px;
+    color: #333;
+    line-height: 22px;
+    padding-bottom: 2px;
+    width: 100%;
+  }
+
+  input[type=text],
+  input[type=number],
+  input[type=phone],
+  input[type=email] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 13px;
+    line-height: 36px;
+    padding: 2px 15px;
+    width: 100%;
+
+    &:focus {
+      box-shadow: none;
+      border-color: #2b9ddd;
+      outline: none;
+    }
+
+    &::placeholder {
+      color: #444;
+    }
+  }
+
+  .input-error {
+    color: red;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,40 @@
+.accordion {
+  box-sizing: border-box;
+  padding-bottom: 10px;
+  width: 100%;
+
+  .header {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0px;
+    width: 100%;
+
+    .label {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .icon {
+      color: rgba(0, 0, 0, 0.54);
+    }
+  }
+
+  .content {
+    width: 100%;
+
+    &--entered {
+      max-height: 600px;
+      overflow: hidden;
+      transition: max-height 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    }
+
+    &--hidden {
+      max-height: 0px;
+      overflow: hidden;
+      transition: max-height 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      ;
+    }
+  }
+}
