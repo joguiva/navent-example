@@ -1,0 +1,20 @@
+main {
+  background-color: #f0f0f0;
+  height: 100%;
+  
+  .main-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1480px;
+    padding: 20px;
+    height: 100%;
+    
+    .list-page {
+      flex-shrink: 1;
+      padding-left: 10px;
+      width: 100%;
+    }
+  }
+}
