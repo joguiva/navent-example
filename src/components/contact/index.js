@@ -58,7 +58,6 @@ class Contact extends Component {
 
   onCheckEmail = () => {
     if (this.props.checkEmail(this.state.email)) {
-      console.log('prueba')
       this.setState({
         error: false,
         errorEmail: '',
@@ -66,7 +65,6 @@ class Contact extends Component {
       })
       this.sendEmail()
     } else {
-      console.log('bien?')
       this.setState({
         error: true,
         errorEmail: 'Necesitamos un correo válido'
