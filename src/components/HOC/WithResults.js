@@ -49,12 +49,9 @@ const withResults = (WrappedComponent) => {
 
     sendContact = (email, id) => {
       let session = this.checkLocalStorage();
-      console.log('session',session);
 
       let withId = session.contacts.filter((item) => item.id.toString() === id);
-      console.log('withId',withId)
       let save = session.contacts.filter((item) => item.id.toString() !== id);
-      console.log('save',save)
 
       if (withId.length > 0) {
         if (withId[0].email.includes(email))
@@ -62,7 +59,6 @@ const withResults = (WrappedComponent) => {
       } else {
         const newData = {id: id, email: [email]};
         session.contacts.push(newData);
-        console.log('session', session);
         this.setLocalStorage(session);
         return true;
       }
@@ -73,9 +69,7 @@ const withResults = (WrappedComponent) => {
         session.contacts = [];
       }
       withId[0].email.push(email);
-      console.log('new withId', withId);
       session.contacts.push(withId[0]);
-      console.log('session', session);
       this.setLocalStorage(session);
       return true;
     }
