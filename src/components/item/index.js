@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Page from './page';
 import withResults from '../HOC/WithResults';
-import moment from 'moment';
 
 class Item extends Component {
   constructor(props) {
